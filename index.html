@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine</title>
+
+<style>
+body {
+    background-color: #ffc0cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Would you be my Valentine?</h1>
+<img src="IMG_6175" width="250">
+
+<div>
+    <button onclick="sayYes()">Yes</button>
+    <button onclick="sayNo()">No</button>
+</div>
+
+<script>
+function sayYes() {
+    document.body.innerHTML = "<h1 style='font-size:60px;'>She said YES ❤️</h1>";
+}
+
+function sayNo() {
+    document.querySelector("button").style.fontSize = "40px";
+}
+</script>
+
+</body>
+</html>
