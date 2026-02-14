@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine</title>
+
+<style>
+body {
+    background-color: #ffc0cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+img {
+    margin: 20px;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Would you be my Valentine?</h1>
+
+<img src="IMG_6175.jpeg" width="250">
+
+<div>
+    <button id="yesBtn" onclick="sayYes()">Yes</button>
+    <button id="noBtn" onclick="sayNo()">No</button>
+</div>
+
+<script>
+let noCount = 0;
+let yesSize = 20;
+
+function sayYes() {
+    document.body.innerHTML = `
+        <h1 style="font-size:60px;">She said YES ❤️</h1>
+        <img src="IMG_6176.jpeg" width="300" style="margin-top:20px; border-radius:15px;">
+    `;
+}
+function sayNo() {
+    noCount++;
+    yesSize += 15;
+    document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+
+    if (noCount >= 4) {
+        document.getElementById("noBtn").style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
